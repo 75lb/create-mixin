@@ -9,21 +9,28 @@
 ## create-mixin
 <a name="exp_module_create-mixin--createMixin"></a>
 
-### createMixin() ⏏
-Create a function which case be used in an `extends` expression to mix in behaviour to the extended class.
+### createMixin(Src) ⇒ <code>function</code> ⏏
+Returns a function which can be used to mix behaviour from the supplied `Src` class into another class. Intended for use in an `extends` expression.
 
 **Kind**: Exported function  
+**Returns**: <code>function</code> - Returns a function accepting a single `BaseClass` argument which mixes behaviour from `Src` into `BaseClass`.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Src | <code>class</code> | The class containing the behaviour you wish to mix into another class. |
+
 **Example**  
 ```js
-const mixin = require('create-mixin')
+const mix = require('create-mixin')
 
 class Greeter {
    hello () { return 'Hello' }
 }
 
-class FriendlyArray extends mixin(Greeter)(Array) {}
+class FriendlyArray extends mix(Greeter)(Array) {}
 
 const friendlyArray = FriendlyArray.from([ 1, 2, 3 ])
+// friendlyArray is now both an Array and a Greeter.
 console.log('Length:', friendlyArray.length)
 console.log('Greeting:', friendlyArray.hello())
 // Length: 3
