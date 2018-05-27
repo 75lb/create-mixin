@@ -1,7 +1,7 @@
 [![view on npm](https://img.shields.io/npm/v/create-mixin.svg)](https://www.npmjs.org/package/create-mixin)
 [![npm module downloads](https://img.shields.io/npm/dt/create-mixin.svg)](https://www.npmjs.org/package/create-mixin)
-[![Build Status](https://travis-ci.org/.svg?branch=master)](https://travis-ci.org/)
-[![Dependency Status](https://david-dm.org/.svg)](https://david-dm.org/)
+[![Build Status](https://travis-ci.org/75lb/create-mixin.svg?branch=master)](https://travis-ci.org/75lb/create-mixin)
+[![Dependency Status](https://david-dm.org/75lb/create-mixin.svg)](https://david-dm.org/75lb/create-mixin)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 <a name="module_create-mixin"></a>
