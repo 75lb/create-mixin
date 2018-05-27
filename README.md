@@ -10,10 +10,9 @@
 <a name="exp_module_create-mixin--createMixin"></a>
 
 ### createMixin(Src) ⇒ <code>function</code> ⏏
-Returns a function which can be used to mix behaviour from the supplied `Src` class into another class. Intended for use in an `extends` expression.
+Returns a function (accepting a single `BaseClass` argument) which can be used to mix behaviour from the supplied `Src` class into `BaseClass`. Intended for use in an `extends` expression.
 
 **Kind**: Exported function  
-**Returns**: <code>function</code> - Returns a function accepting a single `BaseClass` argument which mixes behaviour from `Src` into `BaseClass`.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -24,7 +23,7 @@ Returns a function which can be used to mix behaviour from the supplied `Src` cl
 const mix = require('create-mixin')
 
 class Greeter {
-   hello () { return 'Hello' }
+  hello () { return 'Hello' }
 }
 
 class FriendlyArray extends mix(Greeter)(Array) {}

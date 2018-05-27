@@ -5,12 +5,12 @@
  */
 
 /**
- * Returns a function which can be used to mix behaviour from the supplied `Src` class into another class. Intended for use in an `extends` expression.
+ * Returns a function (accepting a single `BaseClass` argument) which can be used to mix behaviour from the supplied `Src` class into `BaseClass`. Intended for use in an `extends` expression.
  * @example
  * const mix = require('create-mixin')
  *
  * class Greeter {
-   hello () { return 'Hello' }
+ *   hello () { return 'Hello' }
  * }
  *
  * class FriendlyArray extends mix(Greeter)(Array) {}
@@ -24,7 +24,7 @@
  *
  * @alias module:create-mixin
  * @param {class} Src - The class containing the behaviour you wish to mix into another class.
- * @returns {function} Returns a function accepting a single `BaseClass` argument which mixes behaviour from `Src` into `BaseClass`.
+ * @returns {function}
  */
 function createMixin (Src) {
   return function (Base) {
