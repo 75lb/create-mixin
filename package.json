@@ -2,13 +2,15 @@
   "name": "create-mixin",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.0.0",
-  "description": "create-mixin",
+  "description": "Creates a mixin for use in a class extends expression",
   "repository": "https://github.com/75lb/create-mixin.git",
   "keywords": [
     "create",
     "mixin",
     "class",
-    "exports"
+    "extends",
+    "es2015",
+    "es6"
   ],
   "license": "MIT",
   "engines": {

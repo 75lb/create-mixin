@@ -7,6 +7,8 @@
 <a name="module_create-mixin"></a>
 
 ## create-mixin
+Creates a mixin for use in a class extends expression.
+
 <a name="exp_module_create-mixin--createMixin"></a>
 
 ### createMixin(Src) ⇒ <code>function</code> ⏏
