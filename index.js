@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * Creates a mixin for use in a class extends expression.
  * @module create-mixin

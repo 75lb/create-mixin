@@ -1,4 +1,3 @@
-'use strict'
 const createMixin = require('./')
 const TestRunner = require('test-runner')
 const a = require('assert')
@@ -9,12 +8,17 @@ runner.test('Simple', function () {
   class Something {
     one () { return 1 }
   }
-  const something = createMixin(Something)
+  const mixSomethingInto = createMixin(Something)
 
-  class Test extends something(Array) {}
+  class Test extends mixSomethingInto(Array) {}
 
   const test = new Test()
+  /* test is a Something */
   a.strictEqual(test.one(), 1)
+  a.ok(!(test instanceof Something))
+
+  /* test is also an Array */
+  a.ok(test instanceof Array)
   a.ok(test.forEach)
   a.ok(Test.from)
   test.push(1)
