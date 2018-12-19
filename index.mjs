@@ -32,8 +32,11 @@ function createMixin (Src) {
       if (propName === 'constructor') continue
       Object.defineProperty(Mixed.prototype, propName, Object.getOwnPropertyDescriptor(Src.prototype, propName))
     }
+    if (Src.prototype[Symbol.iterator]) {
+      Object.defineProperty(Mixed.prototype, Symbol.iterator, Object.getOwnPropertyDescriptor(Src.prototype, Symbol.iterator))
+    }
     return Mixed
   }
 }
 
-module.exports = createMixin
+export default createMixin
