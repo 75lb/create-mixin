@@ -4,6 +4,64 @@
 [![Dependency Status](https://david-dm.org/75lb/create-mixin.svg)](https://david-dm.org/75lb/create-mixin)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
+## create-mixin
+
+Given these two classes.
+
+```js
+class Base {
+  constructor () {
+    this.ranBaseConstructor = true
+  }
+  baseMethod () {
+    return 1
+  }
+}
+
+class Mixin {
+  constructor () {
+    this.ranMixinConstructor = true
+  }
+  someMethod () {
+    return 2
+  }
+}
+```
+
+Create a new class mixing one class into another.
+
+```js
+> const mixInto = require('create-mixin')
+
+> class Something extends mixInto(Mixin)(Base) {}
+```
+
+Behaviour of new class.
+
+```js
+> const something = new Something()
+
+> /* new class has methods of both source classes */
+> something.baseMethod()
+1
+
+> something.someMethod()
+2
+
+> /* Only the base constructor is run */
+> something.ranBaseConstructor
+true
+
+> something.ranMixinConstructor
+undefined
+
+> something instanceof Base
+true
+
+> something instanceof Mixin
+false
+```
+
 {{>main}}
 
 * * *

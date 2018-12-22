@@ -4,6 +4,64 @@
 [![Dependency Status](https://david-dm.org/75lb/create-mixin.svg)](https://david-dm.org/75lb/create-mixin)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
+## create-mixin
+
+Given these two classes.
+
+```js
+class Base {
+  constructor () {
+    this.ranBaseConstructor = true
+  }
+  baseMethod () {
+    return 1
+  }
+}
+
+class Mixin {
+  constructor () {
+    this.ranMixinConstructor = true
+  }
+  someMethod () {
+    return 2
+  }
+}
+```
+
+Create a new class mixing one class into another.
+
+```js
+> const mixInto = require('create-mixin')
+
+> class Something extends mixInto(Mixin)(Base) {}
+```
+
+Behaviour of new class.
+
+```js
+> const something = new Something()
+
+> /* new class has methods of both source classes */
+> something.baseMethod()
+1
+
+> something.someMethod()
+2
+
+> /* Only the base constructor is run */
+> something.ranBaseConstructor
+true
+
+> something.ranMixinConstructor
+undefined
+
+> something instanceof Base
+true
+
+> something instanceof Mixin
+false
+```
+
 <a name="module_create-mixin"></a>
 
 ## create-mixin
@@ -12,31 +70,12 @@ Creates a mixin for use in a class extends expression.
 <a name="exp_module_create-mixin--createMixin"></a>
 
 ### createMixin(Src) ⇒ <code>function</code> ⏏
-Returns a function (accepting a single `BaseClass` argument) which can be used to mix behaviour from the supplied `Src` class into `BaseClass`. Intended for use in an `extends` expression.
-
 **Kind**: Exported function  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | Src | <code>class</code> | The class containing the behaviour you wish to mix into another class. |
 
-**Example**  
-```js
-const mix = require('create-mixin')
-
-class Greeter {
-  hello () { return 'Hello' }
-}
-
-class FriendlyArray extends mix(Greeter)(Array) {}
-
-const friendlyArray = FriendlyArray.from([ 1, 2, 3 ])
-// friendlyArray is now both an Array and a Greeter.
-console.log('Length:', friendlyArray.length)
-console.log('Greeting:', friendlyArray.hello())
-// Length: 3
-// Greeting: Hello
-```
 
 * * *
 
