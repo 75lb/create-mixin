@@ -1,7 +1,7 @@
 {
   "name": "create-mixin",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Creates a mixin for use in a class extends expression",
   "repository": "https://github.com/75lb/create-mixin.git",
   "keywords": [
