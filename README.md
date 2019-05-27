@@ -1,10 +1,10 @@
 [![view on npm](https://img.shields.io/npm/v/create-mixin.svg)](https://www.npmjs.org/package/create-mixin)
 [![npm module downloads](https://img.shields.io/npm/dt/create-mixin.svg)](https://www.npmjs.org/package/create-mixin)
 [![Build Status](https://travis-ci.org/75lb/create-mixin.svg?branch=master)](https://travis-ci.org/75lb/create-mixin)
-[![Dependency Status](https://david-dm.org/75lb/create-mixin.svg)](https://david-dm.org/75lb/create-mixin)
+[![Dependency Status](https://badgen.net/david/dep/75lb/create-mixin)](https://david-dm.org/75lb/create-mixin)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
-## create-mixin
+# create-mixin
 
 Given these two classes.
 
@@ -79,4 +79,4 @@ Creates a mixin for use in a class extends expression.
 
 * * *
 
-&copy; 2018 Lloyd Brookes <75pound@gmail.com>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).
+&copy; 2018-19 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).

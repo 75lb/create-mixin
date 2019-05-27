@@ -1,10 +1,10 @@
 const mixInto = require('./')
-const TestRunner = require('test-runner')
+const Tom = require('test-runner').Tom
 const a = require('assert')
 
-const runner = new TestRunner()
+const tom = module.exports = new Tom('test')
 
-runner.test('Demo', function () {
+tom.test('Demo', function () {
   class Base {
     constructor () {
       this.ranBaseConstructor = true
