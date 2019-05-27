@@ -6,7 +6,19 @@
 
 # create-mixin
 
+Useful for achieving something resembling multiple-inheritence in Javascript.
+
+```js
+const mixInto = require('create-mixin')
+const EventEmitter = require('events')
+
+class EmittingArray extends mixInto(EventEmitter)(Array) {}
+```
+
+## Example
+
 Given these two classes.
+
 
 ```js
 class Base {
@@ -62,21 +74,6 @@ true
 false
 ```
 
-<a name="module_create-mixin"></a>
-
-## create-mixin
-Creates a mixin for use in a class extends expression.
-
-<a name="exp_module_create-mixin--createMixin"></a>
-
-### createMixin(Src) ⇒ <code>function</code> ⏏
-**Kind**: Exported function  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| Src | <code>class</code> | The class containing the behaviour you wish to mix into another class. |
-
-
 * * *
 
-&copy; 2018-19 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).
+&copy; 2018-19 Lloyd Brookes \<75pound@gmail.com\>.

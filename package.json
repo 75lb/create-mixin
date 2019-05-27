@@ -23,11 +23,9 @@
   },
   "scripts": {
     "test": "test-runner test.js",
-    "docs": "jsdoc2md --template README.hbs dist/index.js > README.md",
     "dist": "rollup -c dist/index.config.js"
   },
   "devDependencies": {
-    "jsdoc-to-markdown": "^5.0.0",
     "rollup": "^1.12.4",
     "test-runner": "^0.6.0"
   }
