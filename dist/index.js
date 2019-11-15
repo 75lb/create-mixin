@@ -2,7 +2,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = global || self, global.createMixin = factory());
-}(this, function () { 'use strict';
+}(this, (function () { 'use strict';
 
   /**
    * Creates a mixin for use in a class extends expression.
@@ -30,4 +30,4 @@
 
   return createMixin;
 
-}));
+})));
