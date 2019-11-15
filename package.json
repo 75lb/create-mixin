@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "scripts": {
     "test": "npm run dist && esm-runner test.mjs && web-runner test.mjs",
