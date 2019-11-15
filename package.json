@@ -1,7 +1,7 @@
 {
   "name": "create-mixin",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Mix the prototype of one class into another",
   "repository": "https://github.com/75lb/create-mixin.git",
   "keywords": [
